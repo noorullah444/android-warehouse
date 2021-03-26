@@ -1,0 +1,10 @@
+// rate app in playstore
+private void rateUs() {
+        try {
+            final Uri uri = Uri.parse("market://details?id=" + getApplicationContext().getPackageName());
+            final Intent rateAppIntent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(rateAppIntent);
+        } catch (ActivityNotFoundException e) {
+            Log.e(TAG, "ActivityNotFoundException: Error " + e.getMessage());
+        }
+    }
