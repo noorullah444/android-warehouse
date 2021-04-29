@@ -1,0 +1,10 @@
+@Override
+        public void onBindViewHolder(UriViewHolder holder, int position) {
+            Glide.with(context).load(mPaths.get(position))
+                    .transform(new CenterCrop(),new RoundedCorners(16))
+                    .into(holder.thumbnail);
+            holder.mPath.setText(mPaths.get(position));
+
+// fade the eventh item in the list
+            holder.mPath.setAlpha(position % 2 == 0 ? 1.0f : 0.54f);
+        }
