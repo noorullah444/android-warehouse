@@ -12,9 +12,6 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.HashMap;
 
-// Copyright (c) 2018 ArsalImam
-// All Rights Reserved
-//
 public class AudioExtractor {
 
     private static final int DEFAULT_BUFFER_SIZE = 1 * 1024 * 1024;
